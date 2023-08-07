@@ -1,17 +1,26 @@
 import React from 'react';
-import ReactDOM from 'react-dom/client';
+import ReactDOM from 'react-dom'; // Importa ReactDOM correctamente
 import './index.css';
 import App from './App';
-import reportWebVitals from './reportWebVitals';
+import 'bootstrap/dist/css/bootstrap.min.css';
+import { initializeApp } from 'firebase/app';
+import 'firebase/auth'; // Importa los módulos que necesitas
+
+
+const firebaseConfig = {
+  apiKey: "AIzaSyDAoLA6_zN_-sJHKYw0VNV2hnBFKzDCXWY",
+  authDomain: "muro-interactivo-67e4e.firebaseapp.com",
+  projectId: "muro-interactivo-67e4e",
+  storageBucket: "muro-interactivo-67e4e.appspot.com",
+  messagingSenderId: "805822977612",
+  appId: "1:805822977612:web:af80e3c3cfd5ecdea386e9"
+};
+// Inicializa Firebase con la configuración
+initializeApp(firebaseConfig);
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>
-);
 
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
-reportWebVitals();
+    <App />
+
+);
